@@ -1,0 +1,28 @@
+{% extends 'BloggerBlogBundle::base.html.twig' %}
+
+{% block title %}Contacto{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Contacta con nosotros</h1>
+    </header>
+    {% for flashMessage in app.session.flashbag.get('blogger-notice') %}
+		<div class="blogger-notice">
+			{{ flashMessage }}
+		</div>
+	{% endfor %}
+
+    <p>Quieres contactar con el Team Rocket Barcelona?</p>
+
+    <form action="{{ path('blogger_blog_contacto') }}" method="post"  class="blogger">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.asunto) }}
+        {{ form_row(form.cuerpo) }}
+
+        {{ form_rest(form) }}
+
+        <inpu
+{% endblock %}

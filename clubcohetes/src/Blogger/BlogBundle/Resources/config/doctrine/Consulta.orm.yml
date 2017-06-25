@@ -1,0 +1,24 @@
+Blogger\BlogBundle\Entity\Consulta:
+    type: entity
+    table: null
+    repositoryClass: Blogger\BlogBundle\Repository\ConsultaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: '30'
+        email:
+            type: string
+            length: '50'
+        asunto:
+            type: string
+            length: '100'
+        cuerpo:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
